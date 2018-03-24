@@ -45,12 +45,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+      
         <nav className="navbar navbar-expand-lg navbar-light navbar-custom">
           <a className="navbar-brand center" href="/">Album Search</a>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
-
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ml-auto">
               <form onSubmit={this.handleSubmit} className="form-inline my-2 my-lg-0">
@@ -74,11 +74,12 @@ class App extends Component {
                       <p>${album.collectionPrice}</p>
                       <p>Release Date: {dateFormat(album.releaseDate, "mm/dd/yyyy")}</p>
                       <p>Genre: {album.primaryGenreName}</p>
+                      <p>Track Count: {album.trackCount}</p>
                       <span style={{ fontSize: '9px' }}>{album.copyright}</span>
                     </div>
                   </div></a>
                   <div className="card-body">
-                    <h5 className="card-title">{album.collectionName}</h5>
+                    <h5 className="card-title">{album.collectionName}{(album.contentAdvisoryRating === "Explicit") && <span className="align-baseline pl-2" style={{fontSize: "10px", color: "red"}}>(Explicit)</span>}</h5>
                     <p><strong>{album.artistName}</strong></p>
                   </div>
                 </div>
