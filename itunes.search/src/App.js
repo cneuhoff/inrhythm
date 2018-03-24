@@ -79,7 +79,7 @@ class App extends Component {
                     </div>
                   </div></a>
                   <div className="card-body">
-                    <h5 className="card-title">{album.collectionName}{(album.contentAdvisoryRating === "Explicit") && <span className="align-baseline pl-2" style={{fontSize: "10px", color: "red"}}>(Explicit)</span>}</h5>
+                    <h5 className="card-title">{album.collectionName}{(album.contentAdvisoryRating === "Explicit") && <span className="align-middle pl-1" style={{fontSize: "10px", color: "red"}}>(Explicit)</span>}</h5>
                     <p><strong>{album.artistName}</strong></p>
                   </div>
                 </div>
